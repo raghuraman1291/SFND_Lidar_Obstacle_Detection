@@ -84,11 +84,11 @@ std::unordered_set<int> Ransac(pcl::PointCloud<pcl::PointXYZ>::Ptr cloud, int ma
 		int indexPoint1 = rand() % cloud->points.size();
 		int indexPoint2 = rand() % cloud->points.size();
 
-		float x1 = points[indexPoint1].x;
-		float y1 = points[indexPoint1].y;
+		float x1 = cloud->points[indexPoint1].x;
+		float y1 = cloud->points[indexPoint1].y;
 
-		float x2 = points[indexPoint2].x;
-		float y2 = points[indexPoint2].y;
+		float x2 = cloud->points[indexPoint2].x;
+		float y2 = cloud->points[indexPoint2].y;
 
 		float distanceMax = 0.0f;
 
