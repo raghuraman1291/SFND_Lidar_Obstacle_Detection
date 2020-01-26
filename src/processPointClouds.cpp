@@ -43,8 +43,8 @@ std::pair<typename pcl::PointCloud<PointT>::Ptr, typename pcl::PointCloud<PointT
 {
     // TODO: Create two new point clouds, one cloud with obstacles and other with segmented plane
 
-    typename pcl::PointCloud<PointT>::Ptr planeCloud = new pcl::PointCloud<PointT>();
-    typename pcl::PointCloud<PointT>::Ptr ObstCloud = new pcl::PointCloud<PointT>();
+    typename pcl::PointCloud<PointT>::Ptr planeCloud (new pcl::PointCloud<PointT>());
+    typename pcl::PointCloud<PointT>::Ptr ObstCloud (new pcl::PointCloud<PointT>());
     pcl::ExtractIndices<PointT> extract;
 
     extract.setInputCloud (cloud);
